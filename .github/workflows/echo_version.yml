@@ -1,0 +1,16 @@
+name: Echo Version
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  echo:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: cat Version
+        run: echo $(cat .version)
