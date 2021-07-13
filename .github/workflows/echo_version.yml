@@ -12,5 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: cat Version
+      - name: echo Version
         run: echo $(cat .version)
+
+      - name: echo current branch
+        run: echo $(git branch)
